@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic DataGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="/demo/demo.css">
+	<script type="text/javascript" src="/jquery.min.js"></script>
+	<script type="text/javascript" src="/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<h2>上班时间统计</h2>
+	<div style="margin:20px 0;"></div>
+	
+	<table class="easyui-datagrid" title="上班时间统计" style="width:780px;height:250px"
+			data-options="singleSelect:true,collapsible:true,url:'userSignInfo',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'name',width:80,align:'center'">姓名</th>
+				<th data-options="field:'mac_addr',width:150,align:'center'">mac地址</th>
+				<th data-options="field:'start_time',width:180,align:'center'">上班时间</th>
+				<th data-options="field:'end_time',width:180,align:'center'">下班时间</th>
+				<th data-options="field:'work_time',width:120,align:'center'">工作时长（分钟）</th>
+			</tr>
+		</thead>
+	</table>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 #python准备
 #python.exe Scripts/pip3.exe install PyMySQL
+#pyinstaller -F D:\workspace\python\main.py
 pip3 install PyMySQL
-pip3 install urllib3
 #node.js准备
 npm install mysql
 npm install express --save

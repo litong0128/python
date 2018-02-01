@@ -7,6 +7,7 @@ import re
 import time
 import os
 import _thread
+import webbrowser
 
 def cmd ():
     print ('服务端启动:node server.js......')
@@ -19,7 +20,9 @@ if __name__ == '__main__':
         _thread.start_new_thread(cmd, () )
     except:
         print ('Error: unable to start thread')
-        
+
+    webbrowser.open("http://localhost:8081/basic.html")
+
     while (True):
         # 路由器IP
         ip = '192.168.1.198'

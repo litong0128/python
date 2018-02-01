@@ -20,15 +20,15 @@ class dbUtil:
         db.close()
 
     # 测试
-    dbn = getdbConnect()
-    sqlStr = "select * from user_connect_info"
-    try:
-        results = selectWithSql(dbn,sqlStr)
-        for row in results : 
-            mac_addr = row[0]
-            con_time = row[1]
-            print(mac_addr,con_time)
-    except Exception as e:
-        raise e
-    finally:  
-        close(dbn)
+    # dbn = getdbConnect()
+    # sqlStr = "select * from user_connect_info"
+    # try:
+    #     results = selectWithSql(dbn,sqlStr)
+    #     for row in results : 
+    #         mac_addr = row[0]
+    #         con_time = row[1]
+    #         print(mac_addr,con_time)
+    # except Exception as e:
+    #     raise e
+    # finally:  
+    #     close(dbn)

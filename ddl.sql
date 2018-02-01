@@ -56,3 +56,11 @@ from (
     group by con_date,mac_addr
     ) a left join user_info b on a.mac_addr = b.mac_addr 
 where name <> "" order by con_date,work_time desc;
+
+
+select distinct id,name,b.mac_addr,DATE_FORMAT(sign_time,"%Y-%m-%d %H:%i:%s") as sign_time
+from user_info a right join  
+(select distinct mac_addr
+    from user_connect_info 
+    where substring(con_time,1,10) = current_date()
+) b on a.mac_addr = b.mac_addr order by id,name 

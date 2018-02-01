@@ -45,7 +45,9 @@ app.post('/get_user', function (req, res) {
   console.log('--------------------------get user----------------------------'); 
   var connection = ndb.getConnect(db_host,db_user,db_pass,db_db);
   ndb.connectDB(connection);
-  var  sql = 'select id,name,mac_addr,sign_time from user_info';
+  // 将注册表与连接表进行关联，把注册和未注册都显示出来
+  // var  sql = 'select distinct id,name,b.mac_addr,DATE_FORMAT(sign_time,"%Y-%m-%d %H:%i:%s") as sign_time from user_info a right join (select distinct mac_addr from user_connect_info where substring(con_time,1,10) = current_date()) b on a.mac_addr = b.mac_addr order by id,name';
+  var  sql = 'select distinct id,name,mac_addr,DATE_FORMAT(sign_time,"%Y-%m-%d %H:%i:%s") as sign_time from user_info ';
   connection.query(sql,function (err, result) {
     if(err){
       console.log('[SELECT ERROR] - ',err.message);

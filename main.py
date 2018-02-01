@@ -1,13 +1,25 @@
+# -*- coding: UTF-8 -*-
 import urllib
 from dbUtil import dbUtil
 import urllib.request
 import base64
 import re
 import time
+import os
+import _thread
 
+def cmd ():
+    print ('服务端启动:node server.js......')
+    os.system('node server.js')
+   
 
 
 if __name__ == '__main__':
+    try:
+        _thread.start_new_thread(cmd, () )
+    except:
+        print ('Error: unable to start thread')
+        
     while (True):
         # 路由器IP
         ip = '192.168.1.198'
@@ -54,7 +66,7 @@ if __name__ == '__main__':
             db.rollback()   
         finally:  
             db.close()
-            time.sleep(10)
+            time.sleep(30)
 
 # 测试
 # dbn = dbUtil.getdbConnect()

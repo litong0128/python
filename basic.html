@@ -12,8 +12,10 @@
 <body>
 	<h2>上班时间统计</h2>
 	<div style="margin:20px 0;"></div>
-	
-	<table class="easyui-datagrid" title="上班时间统计" style="width:780px;height:250px"
+	<div id="tb" style="height:auto">
+		<a href="userinfo.html" class="easyui-linkbutton" data-options="iconCls: 'icon-edit',plain:false" >用户注册管理</a>
+    </div>
+	<table class="easyui-datagrid" title="上班时间统计" style="width:auto;height:auto"
 			data-options="singleSelect:true,collapsible:true,url:'userSignInfo',method:'get'">
 		<thead>
 			<tr>
@@ -25,6 +27,6 @@
 			</tr>
 		</thead>
 	</table>
-
+	
 </body>
 </html>

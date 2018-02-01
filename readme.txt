@@ -1,4 +1,5 @@
 #python准备
+#python.exe Scripts/pip3.exe install PyMySQL
 pip3 install PyMySQL
 pip3 install urllib3
 #node.js准备

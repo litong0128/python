@@ -1,6 +1,18 @@
 --用户连接信息表
+create database wifiSign;
 use wifiSign;
 drop table user_connect_info;
+create table IF NOT EXISTS user_connect_info (
+    mac_addr varchar(50),
+    con_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+insert into user_connect_info (mac_addr) values ('00-FF-67-0F-7C-92');
+insert into user_connect_info (mac_addr) values ('00-FF-67-0F-7C-93');
+insert into user_connect_info (mac_addr) values ('00-FF-67-0F-7C-94');
+insert into user_connect_info (mac_addr) values ('00-FF-67-0F-7C-95');
+insert into user_connect_info (mac_addr) values ('00-FF-67-0F-7C-96');
+insert into user_connect_info (mac_addr) values ('00-FF-67-0F-7C-97');
+select * from `user_connect_info`;drop table user_connect_info;
 create table IF NOT EXISTS user_connect_info (
     mac_addr varchar(50),
     con_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP

@@ -54,7 +54,7 @@ if __name__ == '__main__':
             db.rollback()   
         finally:  
             db.close()
-            time.sleep(30)
+            time.sleep(10)
 
 # 测试
 # dbn = dbUtil.getdbConnect()

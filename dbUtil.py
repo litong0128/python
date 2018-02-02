@@ -1,12 +1,20 @@
 import pymysql
+import configparser
 class dbUtil:
     # 定义变量
+    config = configparser.ConfigParser()
+    config.read('config.ini', encoding='utf-8')
+    host = config.get('db', 'host')
+    user = config.get('db', 'user')
+    password = config.get('db', 'password')
+    database = config.get('db', 'database')
+    port = config.get('db', 'port')
     def getdbConnect():
-        host = "127.0.0.1"
-        user = "root"
-        password = "root"
-        database = "wifiSign"
-        port = 3306
+        # host = "127.0.0.1"
+        # user = "root"
+        # password = "root"
+        # database = "wifiSign"
+        # port = 3306
         dbc = pymysql.connect(host=host,user=user,password=password,db=database,port=port) 
         return dbc
 

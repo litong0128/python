@@ -1,0 +1,12 @@
+*.pyc
+*.zip
+*.toc
+*.pkg
+*.spec
+/build/
+*.cpython*.pyc
+*-main..html
+*.exe
+__pycache__/dbUtil.cpython-36.pyc
+*.pyc
+*.pyc
